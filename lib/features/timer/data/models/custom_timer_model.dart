@@ -6,7 +6,15 @@ class CustomTimerModel extends CustomTimer {
 
   factory CustomTimerModel.fromJson(Map<String, dynamic> json) {
     return CustomTimerModel(
-        duration: (json['duration'] as num).toInt(),
-        interval: (json['interval'] as num).toInt());
+      duration: (json['duration'] as num).toInt(),
+      interval: (json['interval'] as num).toInt(),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'duration': duration,
+      'interval': interval,
+    };
   }
 }

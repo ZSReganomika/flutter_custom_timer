@@ -1,10 +1,11 @@
 import 'package:equatable/equatable.dart';
 
-class Duration extends Equatable {
-  const Duration(this.duration);
+class CustomTimer extends Equatable {
+  const CustomTimer({required this.duration, required this.interval});
 
   final int duration;
+  final int interval;
 
   @override
-  List<Object?> get props => [duration];
+  List<Object?> get props => [duration, interval];
 }

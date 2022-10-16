@@ -7,7 +7,10 @@ environment:
   sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
+  auto_route: ^5.0.2
   bloc:
+  build_runner:  
+  cherrypick: ^1.0.2
   equatable: ^2.0.3
   flutter:
     sdk: flutter
