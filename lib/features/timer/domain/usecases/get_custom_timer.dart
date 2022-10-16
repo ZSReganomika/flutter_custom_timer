@@ -1,16 +1,16 @@
-import 'package:flutter_timer/core/usecase/future_usecase.dart';
+// ignore_for_file: always_use_package_imports, unnecessary_await_in_return
 
-// ignore: always_use_package_imports
-import '../repositories/duration_repository.dart';
+import '../../../../core/usecase/future_usecase.dart';
+import '../entities/custom_timer.dart';
+import '../repositories/custom_timer_repository.dart';
 
-class GetDuration implements FutureUseCase<void, Duration> {
-  GetDuration(this.repository);
+class GetCustomTimer implements FutureUseCase<void, CustomTimer> {
+  GetCustomTimer(this.repository);
 
-  final DurationRepository repository;
+  final CustomTimerRepository repository;
 
   @override
-  Future<Duration> execute(void params) async {
-    // ignore: unnecessary_await_in_return
-    return await repository.getDuration();
+  Future<CustomTimer> execute(void params) async {
+    return await repository.getCustomTimer();
   }
 }

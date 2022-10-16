@@ -1,4 +1,7 @@
+import 'package:cherrypick/cherrypick.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_timer/features/configure_timer/presentation/di/configure_timer_di.dart';
+import 'package:flutter_timer/features/configure_timer/presentation/view/configure_timer_page.dart';
 import 'features/timer/presentation/view/timer_page.dart';
 
 class App extends StatelessWidget {
@@ -6,6 +9,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   
     return MaterialApp(
       title: 'Flutter Timer',
       theme: ThemeData(
@@ -14,7 +18,7 @@ class App extends StatelessWidget {
           secondary: Color.fromRGBO(72, 74, 126, 1),
         ),
       ),
-      home: const TimerPage(),
+      home: ConfigureTimerPage(),
     );
   }
 }
